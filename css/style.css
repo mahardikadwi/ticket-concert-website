@@ -132,6 +132,13 @@ span {
   padding: 0 18px;
 }
 
+@media only screen and (min-width: 480px) {
+  nav-logo-block {
+    flex-direction: column;
+  }
+}
+
+
 .nav_navList {
   width: auto;
   flex-direction: row;
