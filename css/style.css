@@ -133,10 +133,11 @@ span {
 }
 
 @media only screen and (max-width: 720px) {
-  nav-logo-block { 
+  .nav-logo-block { 
     display: flex;
     flex-direction: column;
   }
+  
 }
 
 
