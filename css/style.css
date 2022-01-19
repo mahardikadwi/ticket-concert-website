@@ -132,7 +132,7 @@ span {
   padding: 0 18px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 480px) {
   .nav-logo-block { 
     display: flex;
     flex-direction: column;
