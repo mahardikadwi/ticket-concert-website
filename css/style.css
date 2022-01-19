@@ -137,7 +137,9 @@ span {
     display: flex;
     flex-direction: column;
   }
-  
+  .nav-divider {
+    display: none;
+  }
 }
 
 
