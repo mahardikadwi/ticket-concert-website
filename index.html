@@ -14,9 +14,18 @@
 
   <body>
     <div class="layout">
+      <!-- Mobile Navigation -->
+      <div class="nav-logo-block-mobile">
+        <a href="" class="nav-logo"><h1>Concerto</h1></a>
+        <span class="nav-dates">Jul 22-24 & 29-31</span>
+      </div>
+      <button class="nav-button-mobile">
+        <img src="images/hamburger-lines.svg" alt="" class="button-image-mobile">
+      </button>
+      <!-- Desktop Navigation -->
       <div class="nav-wrapper">
         <div class="nav-container">
-          <nav class="navbar">
+          <div class="navbar">
             <div class="nav-inner">
               <div class="nav-logo-block">
                 <a href="" class="nav-logo"><h1>Concerto</h1></a>
@@ -41,7 +50,7 @@
                 </li>
               </ul>
             </div>
-          </nav>
+          </div>
         </div>
       </div>
 
@@ -56,7 +65,9 @@
             />
             <h1 class="hero-tagline">Once in a Lifetime Experience.</h1>
             <p>Jul 22-24 & Jul 29-31</p>
-            <button class="btn">Buy Tickets</button>
+            <button class="btn">
+              <a href="#">Buy Tickets</a>
+            </button>
           </div>
         </div>
         <img src="images/hero-logo.png" alt="" class="hero-image" />
@@ -88,7 +99,9 @@
                 passes for $99 down and spread your payments over the next 8
                 months or 25% down for 4 equal payments.
               </p>
-              <button class="btn btn-content">Learn More</button>
+              <button class="btn">
+                <a href="#">Learn More</a>
+              </button>
             </div>
           </div>
         </section>
@@ -113,7 +126,9 @@
                 Official Hotel Travel Packages are available for both Concerto
                 weekends and sold exclusively through Concerto Music Travel.
               </p>
-              <button class="btn btn-content">Learn More</button>
+              <button class="btn">
+                <a href="#">Learn More</a>
+              </button>
             </div>
           </div>
           <div class="featured-content-right-2">
@@ -138,8 +153,8 @@
 
       <footer>
         <div class="footer-container">
-          <div class="footer-content-container">
-            <div class="footer-content-logos">
+          <div class="row">
+            <div class="footer-col-1">
               <a href=""><h1 class="footer-logo">Concerto</h1></a>
               <img
                 src="images/goldenvoice-logo.svg"
@@ -148,7 +163,7 @@
               />
               <p class="footer-copyright">© 2022 Dwi Panca Mahardhika</p>
             </div>
-            <ul class="footer-list">
+            <ul class="footer-list footer-col-2">
               <li class="footer-listItem">
                 <a href="#">Privacy Policy</a>
               </li>
@@ -177,12 +192,12 @@
                 <a href="#">COVID-19</a>
               </li>
             </ul>
-            <div class="footer-socials">
+            <div class="footer-col-3">
               <button class="btn footer-btn">
                 <a href="#">Get the Newsletter</a>
               </button>
 
-              <ul class="footer-socialList">
+              <ul class="footer-socialList footer-col-4">
                 <li class="footer-socialIcon">
                   <a href=""><i class="fab fa-facebook fa-2x"></i></a>
                 </li>
