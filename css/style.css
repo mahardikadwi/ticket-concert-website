@@ -28,7 +28,6 @@ body {
   margin: 0;
 }
 
-<<<<<<< HEAD
 .row {
   display: flex;
   align-items: center;
@@ -36,8 +35,6 @@ body {
   justify-content: space-around;
 }
 
-=======
->>>>>>> 82b9fe96ee6ae0b4859258770517d6a416ecb241
 img {
   max-width: 100%;
   height: auto;
@@ -182,7 +179,6 @@ button {
   padding: 0 18px;
 }
 
-<<<<<<< HEAD
 .nav-dates {
   display: block;
   font-family: 'Poppins';
@@ -221,27 +217,15 @@ button {
   }
   .nav-button-mobile {
     display: block;
-=======
-@media only screen and (max-width: 600px) {
-  .nav-logo-block { 
-    display: flex;
-    flex-direction: column;
->>>>>>> 82b9fe96ee6ae0b4859258770517d6a416ecb241
   }
   .nav-divider {
     display: none;
   }
-<<<<<<< HEAD
   .nav_navList li {
     display: none;
   }
 }
 
-=======
-}
-
-
->>>>>>> 82b9fe96ee6ae0b4859258770517d6a416ecb241
 .nav_navList {
   width: auto;
   flex-direction: row;
