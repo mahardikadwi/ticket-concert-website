@@ -64,9 +64,14 @@ span {
   font-weight: 300;
 }
 
+b {
+  font-weight: 700;
+}
+
 button {
   padding: 0;
   background: none;
+  border: none;
 }
 
 /* Full scale layout */
@@ -135,7 +140,6 @@ button {
   background-repeat: no-repeat;
   background-position: 50%;
   z-index: 40;
-  border: none;
 }
 
 .button-image-mobile {
@@ -187,6 +191,7 @@ button {
   color: #3a3a3a;
 }
 
+/* Media queries for Navigation bar */
 @media screen and (max-width: 1920px) {
   .nav-wrapper {
     display: block;
@@ -203,7 +208,6 @@ button {
   .nav-divider {
     display: block;
   }
-  
 }
 
 @media screen and (max-width: 720px) {
@@ -238,7 +242,7 @@ button {
 .nav_navItem {
   margin: 0 20px;
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
   font-family: "Poppins", cursive;
   letter-spacing: 1.5px;
 }
@@ -290,8 +294,51 @@ button {
 }
 
 /* Hero section */
-.logo {
-  font-size: 75px;
+.hero-textContent {
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.hero-logo {
+  letter-spacing: 3.4px;
+  text-align: center;
+  /* max-width: 400px; */
+}
+
+.hero-logo-inner {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-logo {
+    font-size: 3.125rem;
+    max-width: 100%;
+  }
+
+  .hero-logo-inner {
+    all: unset;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .hero-logo {
+    font-size: 2.5rem;
+  }
+
+  .hero-squiggle {
+    margin-bottom: 1rem;
+  }
+
+  
+
+  .hero-textContent {
+    margin-bottom: 1rem;
+  }
 }
 
 .hero-wrapper {
@@ -322,14 +369,11 @@ button {
 }
 
 .hero-tagline {
-  font-size: 2.675rem;
+  font-size: 2rem;
+  font-family: 'Gloria Hallelujah';
   line-height: 1.1;
   padding-bottom: 2rem;
-}
-
-.hero-tagline ~ p {
-  font-size: 1.375rem;
-  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .btn {
@@ -348,6 +392,12 @@ button {
   color: #000;
 }
 
+.hero-btn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 
 /* Site content */
 .content-wrapper {
@@ -357,12 +407,6 @@ button {
   padding: 80px 0;
 }
 
-.site-tagline {
-  font-size: 45px;
-  margin: 1rem 0;
-  margin: auto;
-  text-align: center;
-}
 
 .featured-content-container {
   display: flex;
@@ -419,6 +463,13 @@ button {
 }
 
 /* Footer */
+.footer hr {
+  border: none;
+  background-color: #3a3a3a;
+  height: 2px;
+  margin: 20px 0;
+}
+
 .footer-container {
   position: relative;
   font-family: "Poppins";
