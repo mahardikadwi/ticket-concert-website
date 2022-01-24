@@ -191,45 +191,6 @@ button {
   color: #3a3a3a;
 }
 
-/* Media queries for Navigation bar */
-@media screen and (max-width: 1920px) {
-  .nav-wrapper {
-    display: block;
-  }
-  .nav-logo-block-mobile {
-    display: none;
-  }
-  .nav-button-mobile {
-    display: none;
-  }
-  .nav_navList li {
-    display: block;
-  }
-  .nav-divider {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .nav-logo-block {
-    display: none;
-  }
-  .nav-logo-block-mobile {
-    display: flex;
-    flex-direction: column;
-    display: block;
-  }
-  .nav-button-mobile {
-    display: block;
-  }
-  .nav-divider {
-    display: none;
-  }
-  .nav_navList li {
-    display: none;
-  }
-}
-
 .nav_navList {
   width: auto;
   flex-direction: row;
@@ -303,42 +264,16 @@ button {
 }
 
 .hero-logo {
+  font-size: 2.1875rem;
   letter-spacing: 3.4px;
   text-align: center;
-  /* max-width: 400px; */
+  max-width: 400px;
 }
 
 .hero-logo-inner {
   display: inline-block;
   text-align: right;
   width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-logo {
-    font-size: 3.125rem;
-    max-width: 100%;
-  }
-
-  .hero-logo-inner {
-    all: unset;
-  }
-}
-
-@media screen and (min-width: 375px) {
-  .hero-logo {
-    font-size: 2.5rem;
-  }
-
-  .hero-squiggle {
-    margin-bottom: 1rem;
-  }
-
-  
-
-  .hero-textContent {
-    margin-bottom: 1rem;
-  }
 }
 
 .hero-wrapper {
@@ -352,7 +287,7 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 7.8125rem 1.375rem 0;
+  padding: 15.625rem 1.375rem 20px;
 }
 
 .hero-content {
@@ -360,7 +295,6 @@ button {
   align-items: center;
   flex-direction: column;
   line-height: 1;
-  padding-top: 80px;
 }
 
 .hero-squiggle {
@@ -562,3 +496,45 @@ button {
   position: relative;
   z-index: -1;
 }
+
+/* Media queries for Navigation bar */
+@media (min-width: 375px) {
+  .hero-logo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    padding: 18.75rem 6.72% 40px;
+  }
+  .hero-logo {
+    font-size: 3.125rem;
+    max-width: 100%;
+  }
+  .hero-logo-inner {
+    all: unset;
+  }
+}
+
+@media (min-width: 1250px) {
+  .nav-logo-block-mobile {
+    display: none;
+  }
+  .nav-button-mobile {
+    display: none;
+  }
+  .nav-wrapper {
+    display: block;
+  }
+  .hero-logo {
+    font-size: 4.5rem;
+  }
+}
+
+
+
+
+
+
+
