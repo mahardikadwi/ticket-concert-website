@@ -496,7 +496,11 @@ div {
 /* Media query */
 @media only screen and (min-width: 360px) {
   .hero-logo {
+<<<<<<< HEAD
     font-size: 1.85rem;
+=======
+    font-size: 1.5rem;
+>>>>>>> 86a77f4f861bd24db71fd9c7aa50d10b40892a37
   }
   .featured-content-container {
     flex-direction: column;
@@ -547,7 +551,7 @@ div {
     padding: 18.75rem 6.72% 40px;
   }
   .hero-logo {
-    font-size: 3.125rem;
+    font-size: 2.125rem;
     max-width: 100%;
   }
   .hero-logo-inner {
