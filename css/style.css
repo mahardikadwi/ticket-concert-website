@@ -28,13 +28,6 @@ body {
   margin: 0;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -72,6 +65,10 @@ button {
   padding: 0;
   background: none;
   border: none;
+}
+
+div {
+  display: block;
 }
 
 /* Full scale layout */
@@ -410,76 +407,60 @@ button {
 }
 
 /* Footer */
-.footer hr {
-  border: none;
-  background-color: #3a3a3a;
-  height: 2px;
-  margin: 20px 0;
+.text-logo {
+  max-width: 177px;
+  width: 100%;
+}
+
+.footer-line {
+  margin-top: 75px;
+  height: 3px;
+  background-color: #000;
 }
 
 .footer-container {
   position: relative;
   font-family: "Poppins";
-  margin: 0 30px;
-  padding: 60px 0 20px;
+  margin: 0 25px;
+  padding-top: 60px;
 }
 
-.footer-col-1,
-.footer-col-2,
-.footer-col-3 {
-  min-width: 260px;
-  margin-bottom: 10px;
-}
-
-.footer-col-1 {
-  flex-basis: 20%;
-}
-
-.footer-col-2 {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-}
-
-.footer-col-3,
-.footer-col-4 {
-  flex-basis: 12%;
-  text-align: center;
-  margin: auto;
+.footer-content-container {
+  display: grid;
+  gap: 30px;
 }
 
 .footer-logo {
-  font-family: "Gloria Hallelujah";
-  max-width: 177px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sponsor-logo {
   max-width: 105px;
   width: 100%;
-  margin-top: 15px;
-}
-
-.footer-copyright {
-  font-size: 0.75rem;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin-top: 14px;
 }
 
 .footer-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin-top: 27px;
 }
 
 .footer-listItem {
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 400;
+}
+
+.footer-copyright {
+  font-size: 0.75em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .footer-socials {
@@ -487,8 +468,9 @@ button {
   flex-direction: column;
 }
 
+.footer-socials,
 .footer-btn {
-  margin-top: 27px;
+  margin: 0;
   max-width: 194px;
   width: 100%;
 }
@@ -496,13 +478,14 @@ button {
 .footer-socialList {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, minmax(auto, 34px));
+  grid-template-columns: repeat(5,minmax(auto,34px));
   gap: 13px;
+  margin-top: 12px;
 }
 
-.footer-socialIcon {
-  margin-top: 15px;
-  padding-left: 18px;
+.footer-socialIcons {
+  width: 34px;
+  height: 34px;
 }
 
 .footer-img {
@@ -526,7 +509,7 @@ button {
     position: relative;
     right: 20px;
   }
-  .featured-content-right-2{
+  .featured-content-right-2 {
     margin-top: 15px;
   }
   .featured-content-left-2 {
@@ -550,7 +533,7 @@ button {
     position: relative;
     right: 20px;
   }
-  .featured-content-right-2{
+  .featured-content-right-2 {
     margin-top: 15px;
   }
   .featured-content-left-2 {
@@ -581,12 +564,30 @@ button {
     position: relative;
     right: 20px;
   }
-  .featured-content-right-2{
+  .featured-content-right-2 {
     margin-top: 15px;
   }
   .featured-content-left-2 {
     position: relative;
     right: 20px;
+  }
+  .footer-content-container {
+    grid-template-columns: 1fr 2fr auto;
+    justify-content: center;
+  }
+  .footer-socials,
+  .footer-btn {
+    margin-left: auto;
+  }
+  .footer-socialList {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px 30px;
   }
 }
 
@@ -604,7 +605,6 @@ button {
     font-size: 4.5rem;
   }
   .featured-content-container {
-    max-width: 3000px;
     flex-direction: row;
   }
   .featured-content-image {
@@ -615,11 +615,19 @@ button {
     position: relative;
     right: 20px;
   }
-  .featured-content-right-2{
+  .featured-content-right-2 {
     margin-top: 15px;
   }
   .featured-content-left-2 {
     position: relative;
     right: 20px;
+  }
+  .footer-content-container {
+    grid-template-columns: 1fr minmax(auto, 700px) 1fr;
+    gap: 70px;
+  }
+  .footer-listItem {
+    font-size: 16px;
+    text-align: center;
   }
 }
