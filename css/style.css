@@ -496,7 +496,7 @@ div {
 /* Media query */
 @media only screen and (min-width: 360px) {
   .hero-logo {
-    font-size: 2.5rem;
+    font-size: 1.85rem;
   }
   .featured-content-container {
     flex-direction: column;
@@ -520,7 +520,7 @@ div {
 
 @media only screen and (min-width: 375px) {
   .hero-logo {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .featured-content-container {
     flex-direction: column;
