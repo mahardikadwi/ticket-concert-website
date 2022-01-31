@@ -496,11 +496,7 @@ div {
 /* Media query */
 @media only screen and (min-width: 360px) {
   .hero-logo {
-<<<<<<< HEAD
     font-size: 1.85rem;
-=======
-    font-size: 1.5rem;
->>>>>>> 86a77f4f861bd24db71fd9c7aa50d10b40892a37
   }
   .featured-content-container {
     flex-direction: column;
