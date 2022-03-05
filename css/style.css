@@ -137,6 +137,7 @@ div {
   background-repeat: no-repeat;
   background-position: 50%;
   z-index: 40;
+  cursor: pointer;
 }
 
 .button-image-mobile {
@@ -165,9 +166,13 @@ div {
   z-index: 2;
 }
 
+.nav-logo {
+  width: 145px;
+}
+
 .nav-logo-block {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: auto;
 }
 
@@ -494,7 +499,11 @@ div {
 }
 
 /* Media query */
-@media only screen and (min-width: 360px) {
+@media screen and (min-width: 360px) {
+  .nav-logo-mobile {
+    width: 140px;
+    margin-top: 13px;
+  }
   .hero-logo {
     font-size: 1.85rem;
   }
@@ -518,7 +527,7 @@ div {
   }
 }
 
-@media only screen and (min-width: 375px) {
+@media screen and (min-width: 375px) {
   .hero-logo {
     font-size: 2rem;
   }
@@ -542,7 +551,27 @@ div {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .nav-wrapper {
+    display: block;
+  }
+  .nav-logo-block-mobile{
+    display: none;
+  }
+  .nav-logo-mobile {
+    display: block;
+  }
+  .nav-divider {
+    display: none;
+  }
+  .nav_navItem {
+    display: inline-flex;
+    font-size: 1rem;
+    margin: 15px 0px 0px 30px;
+  }
+  .nav-button-mobile {
+    display: none;
+  }
   .hero-container {
     padding: 18.75rem 6.72% 40px;
   }
@@ -584,22 +613,43 @@ div {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .nav-logo-block {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .nav-divider {
+    display: block;
+  }
   .footer-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 17px 30px;
   }
 }
 
-@media only screen and (min-width: 1250px) {
-  .nav-logo-block-mobile {
-    display: none;
-  }
+@media screen and (min-width: 1250px) {
   .nav-button-mobile {
     display: none;
   }
   .nav-wrapper {
     display: block;
+  }
+  .nav-logo-block-mobile{
+    display: none;
+  }
+  .nav-logo-mobile {
+    display: none;
+  }
+  .nav-logo-block {
+    display: flex;
+  }
+  .nav-button-mobile {
+    display: none;
+  }
+  .nav_navItem {
+    font-size: 17px;
+    margin: 15px 0px 0px 40px;
   }
   .hero-logo {
     font-size: 4.5rem;
