@@ -1,17 +1,15 @@
 // side navigation menu for mobile
 const navMobileOpenClose = document.getElementById("mobile-nav-button");
 const navWrapper = document.getElementById("mobileWrapper");
-const iconOpen = navMobileOpenClose.querySelector("mobile-button-image-open");
-const iconClose = navMobileOpenClose.querySelector("mobile-button-image-close")
-
 
 navMobileOpenClose.addEventListener("click", () => {
   // arrow function
-  if (navWrapper.classList.contains("visible")) {
-    navWrapper.classList.remove("visible");
+  if (navWrapper.classList.contains("invisible")) {
+    navWrapper.classList.remove("invisible");
+    document.body.classList.remove('lock-scroll');
   } else {
+    document.body.classList.toggle('lock-scroll');
     navWrapper.classList.toggle("show");
-  }
+  };
   navWrapper.classList.toggle("fixed");
-  navMobileOpenClose.classList.toggle("close");
 });

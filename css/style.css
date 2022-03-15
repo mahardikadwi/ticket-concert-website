@@ -26,6 +26,11 @@ html {
 body {
   font-family: "Gloria Hallelujah", cursive;
   margin: 0;
+  height: 100%;
+}
+
+body.lock-scroll {
+  overflow: hidden;
 }
 
 img {
@@ -264,10 +269,9 @@ div {
 }
 
 .mobile-button-image-close {
-  display: block;
-  width: 40px;
+  display: none;
+  width: 35px;
 }
-
 
 /* Hero section */
 .hero-textContent {
@@ -522,7 +526,6 @@ div {
     top: 0;
     height: 100vh;
     transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
   }
   .nav-mobileWrapper::before {
     content: "";
@@ -533,7 +536,6 @@ div {
     height: 100%;
     background: url(/images/mobile-gradient-menu.png) no-repeat;
     background-size: cover;
-    transition: all 0.5s ease-in-out;
     background-position: bottom;
   }
   .nav-mobileWrapper.fixed {
@@ -543,7 +545,6 @@ div {
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: all 0.5s ease-in-out;
   }
   .nav-mobileWrapper.show {
     display: block;
@@ -557,9 +558,6 @@ div {
     z-index: 3;
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-  .mobile-button-image-close.visible {
-    display: none;
   }
   .hero-logo {
     font-size: 1.85rem;
@@ -594,7 +592,7 @@ div {
     transition: all 0.3s ease-in-out;
     z-index: 70;
   }
-  .nav-mobileWrapper.visible {
+  .nav-mobileWrapper.invisible {
     display: none;
   }
   .nav-mobileWrapper.fixed {
