@@ -58,7 +58,7 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" id="navWrapper">
         <div class="nav-container">
           <div class="navbar">
             <div class="nav-inner">
@@ -70,22 +70,55 @@
                 <span class="nav-dates">Jul 22-24 & 29-31</span>
               </div>
               <ul class="nav_navList">
-                <li class="nav_navItem">
-                  <a href="#">Music</a>
+                <li class="nav_navItem" id="navItem">
+                  <a class="nav-links" href="#">Music</a>
+                </li>
+                <li class="nav_navItem" id="navItem">
+                  <a class="nav-links" href="#">Tickets & Passes</a>
+                </li>
+                <li class="nav_navItem" id="navItem">
+                  <a class="nav-links" href="#">Experience</a>
+                </li>
+                <li class="nav_navItem" id="navItem">
+                  <a class="nav-links" href="#">Buy Merch</a>
                 </li>
                 <li class="nav_navItem">
-                  <a href="#">Tickets & Passes</a>
-                </li>
-                <li class="nav_navItem">
-                  <a href="#">Experience</a>
-                </li>
-                <li class="nav_navItem">
-                  <a href="#">Buy Merch</a>
-                </li>
-                <li class="nav_navItem">
-                  <a href="#"><i class="fas fa-search"></i></a>
+                  <a class="nav-links" href="#"><i class="fas fa-search"></i></a>
                 </li>
               </ul>
+            </div>
+            
+            <div class="nav-dropdown-container" id="dropdownNav">
+              <div class="nav-dropdown">
+                <div class="nav-dropdown-child">
+                  <img src="images/dropdown-img-1.png" class="nav-dropdown-images" id="top-image" alt="">
+                  <img src="images/dropdown-img-2.png" class="nav-dropdown-images" id="top-image" alt="">
+                  <img src="images/dropdown-img-3.png" class="nav-dropdown-images" id="top-image" alt="">
+                  <img src="images/dropdown-img-4.png" class="nav-dropdown-images" id="top-image" alt="">
+                </div>
+                <div class="nav-dropdown-child">
+                  <ul class="nav-subList nav-subListDesktop">
+                    <li class="navList-subItem"><a href="">Lineup</a></li>
+                    <li class="navList-subItem"><a href="">YouTube Premium</a></li>
+                    <li class="navList-subItem"><a href="">Concerto: 20 Years in The Desert</a></li>
+                  </ul>
+                  <ul class="nav-subList nav-subListDesktop ">
+                    <li class="navList-subItem"><a href="">Pass Types</a></li>
+                    <li class="navList-subItem"><a href="">Pass Buying Guide</a></li>
+                    <li class="navList-subItem"><a href="">Waitlist & Exchange</a></li>
+                  </ul>
+                  <ul class="nav-subList nav-subListDesktop ">
+                    <li class="navList-subItem"><a href="">Activities</a></li>
+                    <li class="navList-subItem"><a href="">Art</a></li>
+                    <li class="navList-subItem"><a href="">Past Festivals</a></li>
+                  </ul>
+                  <ul class="nav-subList nav-subListDesktop ">
+                    <li class="navList-subItem"><a href="">Catalogue</a></li>
+                    <li class="navList-subItem"><a href="">New Arrivals</a></li>
+                    <li class="navList-subItem"><a href="">Special Offers</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -272,6 +305,7 @@
         <img src="images/footer-pic.png" alt="" class="footer-img" />
       </footer>
     </div>
-  </body>
   <script src="js/main.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  </body>
 </html>
