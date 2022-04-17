@@ -57,6 +57,12 @@ p {
   margin: 0 0 20px;
 }
 
+h1 {
+  font-size: 2.4375rem;
+  line-height: 1.15;
+  letter-spacing: .75px;
+}
+
 p,
 span {
   font-weight: 300;
@@ -105,6 +111,10 @@ div {
   left: 0;
   z-index: -2;
   background-repeat: repeat;
+}
+
+.layout.is-active {
+  background-color: #f2b862;
 }
 
 .layout::after {
@@ -213,13 +223,36 @@ div {
   font-size: 1rem;
   font-family: "Poppins", cursive;
   letter-spacing: 0.5px;
-  position: relative;
 }
 
 .backstroke {
   position: relative;
-  z-index: 1;
+  z-index: 999;
 }
+
+.backstroke::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  min-width: 85px;
+  height: 10px;
+  opacity: 0;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -999;
+  clip-path: polygon(0 0,100% 0,0 50%,100% 100%,0 100%);
+  transition: all .5s ease;
+}
+
+.backstroke.is-active::before, .backstroke:hover::before {
+  opacity: 1;
+  clip-path: polygon(0 0,100% 0,100% 50%,100% 100%,0 100%);
+  background-image: url(/images/nav-brush-stroke.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 
 .navbar {
   position: absolute;
@@ -244,13 +277,14 @@ div {
   background-color: #fffdf4;
   z-index: -1;
   visibility: hidden;
-  margin-top: -93px;
+  margin-top: -92px;
   transition: all 0.5s ease-in;
 }
 
 .nav-dropdown-container.is-active {
   transform: translateY(0);
   visibility: visible;
+  width: 100%;
   transition: all 0.5s ease-in-out;
 }
 
@@ -286,10 +320,6 @@ div {
   transition-delay: 0.2s;
 }
 
-.nav-dropdown-images.is-active {
-  opacity: 1;
-}
-
 #top-image {
   margin-top: -120px;
   height: 450px;
@@ -303,6 +333,7 @@ div {
   width: 100%;
   height: 300px;
   padding-left: 20px;
+  transition: all 0.5s ease;
 }
 
 .navList-subItem {
@@ -313,13 +344,13 @@ div {
   line-height: 1.12;
   color: #3a3a3a;
   margin-right: 15px;
+  width: auto;
 }
 
 .nav-subListDesktop {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
   transform: translate(0);
   transition: all 0.5s ease;
   transition-delay: 0.2s;
@@ -370,6 +401,63 @@ div {
 .mobile-button-image-close {
   display: none;
   width: 35px;
+}
+
+/* Pricelist section */
+.header--container {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  color: #3a3a3a;
+}
+
+.headerContent-left {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1.25rem;
+  padding-left: 0;
+}
+
+.headerContent-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.header--image {
+  width: 100%;
+  height: auto;
+}
+
+.grid-column {
+  min-height: 1px;
+  float: left;
+}
+
+.header--textContent {
+  width: 100%;
+  max-width: 535px;
+  padding-top: 2.1875rem;
+}
+
+.header-textHeader {
+  line-height: .92;
+  letter-spacing: -1.25px;
+  margin-bottom: 16px;
+}
+
+.header--textBody {
+  font-family: 'Poppins';
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 /* Hero section */
@@ -508,7 +596,7 @@ div {
 }
 
 .featured-content-textHeader {
-  font-size: 2.125rem;
+  font-size: 3.825rem;
   line-height: 1.1;
   letter-spacing: -0.5px;
   padding-top: 12px;
@@ -791,6 +879,21 @@ div {
   .featured-content-right-2 {
     margin-top: 15px;
   }
+  .header--wrapper {
+    margin: 0 6.72%;
+  }
+  .header--container {
+    margin: 0 auto;
+  }
+  .headerContent-left {
+    order: 1;
+  }
+  .headerContent-right {
+    order: 2;
+  }
+  .grid-column-sm {
+    width: 50%;
+  }
   .featured-content-left-2 {
     position: relative;
     right: 20px;
@@ -819,6 +922,11 @@ div {
   }
   .nav-divider {
     display: block;
+  }
+  h1 {
+    font-size: 3.8125rem;
+    line-height: .92;
+    letter-spacing: -1.25px;
   }
   .footer-list {
     grid-template-columns: repeat(3, 1fr);
@@ -852,6 +960,11 @@ div {
   }
   .hero-logo {
     font-size: 4.5rem;
+  }
+  h1 {
+    font-size: 4.75rem;
+    line-height: .95;
+    letter-spacing: 2px;
   }
   .featured-content-container {
     flex-direction: row;

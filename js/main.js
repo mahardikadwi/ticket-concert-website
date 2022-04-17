@@ -14,54 +14,64 @@ navMobileOpenClose.addEventListener("click", () => {
   mobileNavWrapper.classList.toggle("fixed");
 });
 
-// desktop navigation (pake for loop ternyata gengsssss)
+// desktop navigation
 const navLink = document.querySelectorAll('.nav-links');
 const navDropdown = document.getElementById('dropdownNav');
 const dropDownImages = document.querySelectorAll('.nav-dropdown-images');
 const dropdownSubList = document.querySelectorAll('.nav-subList');
-let dropDownImagesArr = Array.from(dropDownImages);
-let dropdownListArr = Array.from(dropdownSubList);
+const transparentBg = document.getElementsByClassName('layout');
+const navUnderline = document.querySelectorAll('.backstroke');
 
-
-  for (let i = 0; i < navLink.length; i++) {
     navLink[0].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
-      dropDownImagesArr[0].classList.add('is-active');
-      dropdownListArr[0].classList.add('is-active');
-    });
-    navLink[0].addEventListener('mouseout', () => {
-      navDropdown.classList.remove('is-active');
-      dropDownImagesArr[0].classList.remove('is-active');
-      dropdownListArr[0].classList.remove('is-active');
+      transparentBg[0].classList.add('is-active');
+      dropDownImages[0].style.opacity = '1';
+      dropdownSubList[0].style.display = 'block';
+      dropdownSubList[1].style.display = 'none';
+      dropDownImages[1].style.opacity = '0';
+      dropdownSubList[2].style.display = 'none';
+      dropDownImages[2].style.opacity = '0';
+      dropdownSubList[3].style.display = 'none';
+      dropDownImages[3].style.opacity = '0';
     });
     navLink[1].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
-      dropDownImagesArr[1].classList.add('is-active');
-      dropdownListArr[1].classList.add('is-active');
-    });
-    navLink[1].addEventListener('mouseout', () => {
-      navDropdown.classList.remove('is-active');
-      dropDownImagesArr[1].classList.remove('is-active');
-      dropdownListArr[1].classList.remove('is-active');
+      transparentBg[0].classList.add('is-active');
+      dropDownImages[0].style.opacity = '0';
+      dropdownSubList[0].style.display = 'none';
+      dropdownSubList[1].style.display = 'block';
+      dropDownImages[1].style.opacity = '1';
+      dropdownSubList[2].style.display = 'none';
+      dropDownImages[2].style.opacity = '0';
+      dropdownSubList[3].style.display = 'none';
+      dropDownImages[3].style.opacity = '0';
     });
     navLink[2].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
-      dropDownImagesArr[2].classList.add('is-active');
-      dropdownListArr[2].classList.add('is-active');
-    });
-    navLink[2].addEventListener('mouseout', () => {
-      navDropdown.classList.remove('is-active');
-      dropDownImagesArr[2].classList.remove('is-active');
-      dropdownListArr[2].classList.remove('is-active');
+      transparentBg[0].classList.add('is-active');
+      dropDownImages[0].style.opacity = '0';
+      dropdownSubList[0].style.display = 'none';
+      dropdownSubList[1].style.display = 'none';
+      dropDownImages[1].style.opacity = '0';
+      dropdownSubList[2].style.display = 'block';
+      dropDownImages[2].style.opacity = '1';
+      dropdownSubList[3].style.display = 'none';
+      dropDownImages[3].style.opacity = '0';
     });
     navLink[3].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
-      dropDownImagesArr[3].classList.add('is-active');
-      dropdownListArr[3].classList.add('is-active');
+      transparentBg[0].classList.add('is-active');
+      dropDownImages[0].style.opacity = '0';
+      dropdownSubList[0].style.display = 'none';
+      dropdownSubList[1].style.display = 'none';
+      dropDownImages[1].style.opacity = '0';
+      dropdownSubList[2].style.display = 'none';
+      dropDownImages[2].style.opacity = '0';
+      dropdownSubList[3].style.display = 'block';
+      dropDownImages[3].style.opacity = '1';
     });
-    navLink[3].addEventListener('mouseout', () => {
+    navDropdown.addEventListener('mouseleave', () =>{
       navDropdown.classList.remove('is-active');
-      dropDownImagesArr[3].classList.remove('is-active');
-      dropdownListArr[3].classList.remove('is-active');
+      transparentBg[0].classList.remove('is-active');
     });
-  };
+    
