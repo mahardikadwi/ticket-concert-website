@@ -33,6 +33,8 @@ const navUnderline = document.querySelectorAll('.backstroke');
       dropDownImages[2].style.opacity = '0';
       dropdownSubList[3].style.display = 'none';
       dropDownImages[3].style.opacity = '0';
+      dropdownSubList[4].style.display = 'none';
+      dropDownImages[4].style.opacity = '0';
     });
     navLink[1].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
@@ -45,6 +47,8 @@ const navUnderline = document.querySelectorAll('.backstroke');
       dropDownImages[2].style.opacity = '0';
       dropdownSubList[3].style.display = 'none';
       dropDownImages[3].style.opacity = '0';
+      dropdownSubList[4].style.display = 'none';
+      dropDownImages[4].style.opacity = '0';
     });
     navLink[2].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
@@ -57,6 +61,8 @@ const navUnderline = document.querySelectorAll('.backstroke');
       dropDownImages[2].style.opacity = '1';
       dropdownSubList[3].style.display = 'none';
       dropDownImages[3].style.opacity = '0';
+      dropdownSubList[4].style.display = 'none';
+      dropDownImages[4].style.opacity = '0';
     });
     navLink[3].addEventListener('mouseover', () => {
       navDropdown.classList.add('is-active');
@@ -69,9 +75,36 @@ const navUnderline = document.querySelectorAll('.backstroke');
       dropDownImages[2].style.opacity = '0';
       dropdownSubList[3].style.display = 'block';
       dropDownImages[3].style.opacity = '1';
+      dropdownSubList[4].style.display = 'none';
+      dropDownImages[4].style.opacity = '0';
+    });
+    navLink[4].addEventListener('mouseover', () => {
+      navDropdown.classList.add('is-active');
+      transparentBg[0].classList.add('is-active');
+      dropDownImages[0].style.opacity = '0';
+      dropdownSubList[0].style.display = 'none';
+      dropdownSubList[1].style.display = 'none';
+      dropDownImages[1].style.opacity = '0';
+      dropdownSubList[2].style.display = 'none';
+      dropDownImages[2].style.opacity = '0';
+      dropdownSubList[3].style.display = 'none';
+      dropDownImages[3].style.opacity = '0';
+      dropdownSubList[4].style.display = 'block';
+      dropDownImages[4].style.opacity = '1';
     });
     navDropdown.addEventListener('mouseleave', () =>{
       navDropdown.classList.remove('is-active');
       transparentBg[0].classList.remove('is-active');
     });
+
+// Pricelist show more button
+const showMoreBtn = [].slice.call(document.getElementsByClassName('passes--showMore'));
+const showMoreContent = document.querySelectorAll('.passes--showMoreContent');
+
+showMoreBtn.forEach(function (element, index){
+  element.addEventListener("click", function(){
+    showMoreContent[index].classList.toggle('is-active');
+  });
+});
+
     
